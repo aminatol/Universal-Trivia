@@ -5,11 +5,11 @@ body {
 
 h1,p{
 background-color: white;
-
-}
-
-p {
-  
+font-weight:bold;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 #game-container {
