@@ -33,7 +33,17 @@ h1 {
   
   display: center;
   padding: 5px;
-}
 
+}
+.button-container{
+  background-color: white;
+}
+ .btn{
+  color:#337def
+  
+
+
+
+}
 
 
