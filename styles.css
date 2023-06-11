@@ -1,27 +1,39 @@
 body {
   background-color: #337def;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
-h1,p{
-background-color: white;
-font-weight:bold;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+h1,p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
 
+h1 {
+    height: 150px;
+    
+}
 #game-container {
   background-color: white;
-  border-radius: 1%;
+  border-radius: 5px;
   border-style: bold;
   border-color: black;
-  margin: 250px;
+  width: 800px;
+  max-width: 80%;
+  margin: 50px;
+  padding: 30px;
+  box-shadow: 0 0 10px 2px;
 }
 .info-box {
-  margin-top: 350px;
-
+  
   display: center;
-  padding: 50px;
+  padding: 5px;
 }
+
+
+
