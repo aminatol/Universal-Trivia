@@ -1,3 +1,27 @@
-* {
-  background-image: #d05e84;
+body {
+  background-color: #337def;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,p{
+background-color: white;
+
+}
+
+p {
+  
+}
+
+#game-container {
+  background-color: white;
+  border-radius: 1%;
+  border-style: bold;
+  border-color: black;
+  margin: 250px;
+}
+.info-box {
+  margin-top: 350px;
+
+  display: center;
+  padding: 50px;
 }
