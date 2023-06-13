@@ -1,7 +1,10 @@
 let firstPage = document.getElementById("first-page");
-let triviaQuest = document.getElementById("test");
-
+let triviaQuest = document.getElementById("quiz");
+let getScore = document.getElementById("score");
 let startButton = document.getElementById("start");
+const categories = 
+const animeCategory = 31;
+
 
 function startQuiz(e) {
   e.preventDefault();
@@ -11,64 +14,19 @@ function startQuiz(e) {
 
 startButton.addEventListener("click", startQuiz);
 
-fetch("https://the-trivia-api.com/v2/questions");
+function quizTopic() {
+  const triviaBox = document.createElement("div");
+  triviaBox.classList.add("anime");
+  triviaBox.innerHTML =
+    "Let's test your knowledge on Japanese Anime and Manga!";
+  triviaQuest.append(triviaBox);
 
-// let questions = document.getElementById("trivia-question.numb");
-// (questions = [
-//   {
-//     question: "This is the national flag of which nation",
-//     option: [
-//       { text: "A. Bangladesh", correct: false },
-//       { text: "B. Jordan", correct: false },
-//       { text: "C. India", correct: false },
-//       { text: "D. Sri Lanka", correct: true },
-//     ],
-//     correct: 3,
-//   },
-// ]),
-//   [
-//     {
-//       question: "What is the capitol of France?",
-//       option: [
-//         { text: "A. Cannes", correct: false },
-//         { text: "B. Nice", correct: false },
-//         { text: "C. Paris", correct: true },
-//         { text: "D. Nantes", correct: false },
-//       ],
-//       correct: 2,
-//     },
-//   ];
-// [
-//   {
-//     question: "Which Planet is the largest in our solar system?",
-//     option: [
-//       { text: "A. Saturn", correct: false },
-//       { true: "B. Jupiter", corect: true },
-//       { text: "C. Neptune", correct: false },
-//       { text: "D. Venus", correct: false },
-//     ],
-//     corret: 1,
-//   },
-// ],
-//   [
-//     {
-//       question:
-//         "Which of the following is among the Seven Wonders of the world?",
-//       option: [
-//         { text: "A. Hanging Gardens of Babylon" },
-//         { text: "B. The Great Wall of China", correct: false },
-//         { text: "C. Machu Picchu", correct: false },
-//         { text: "D. Victoria falls", correct: false },
-//       ],
-//       correct: 0,
-//     },
-//   ],
-//   [
-//     {
-//       question: "The Sun is a Planet. True or False?",
-//       option: [
-//         { text: "A. True", correct: false },
-//         { text: "B. False", correct: true },
-//       ],
-//     },
-//   ];
+  async function getQuiz(){
+  categories.forEach(categories) 
+    fetch(`https://opentdb.com/api.php?amount=10&category=31&difficulty=${categories}&type=multiple`)
+    .await((response) => response.json());
+  }
+}
+quizTopic();
+
+
