@@ -5,18 +5,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
-h1,p {
+h1,
+p {
   color: white;
   font-weight: bold;
   text-align: center;
 }
 
 h1 {
-    height: 150px;
-    
+  height: 150px;
 }
 #game-container {
   background-color: white;
@@ -30,20 +29,16 @@ h1 {
   box-shadow: 0 0 10px 2px;
 }
 .info-box {
-  
   display: center;
   padding: 5px;
-
 }
-.button-container{
+.button-container {
   background-color: white;
 }
- .btn{
-  color:#337def
-  
-
-
-
+.btn {
+  color: #337def;
 }
 
-
+.hidden {
+  display: none;
+}
