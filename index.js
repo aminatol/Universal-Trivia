@@ -9,7 +9,9 @@ function startQuiz(e) {
   triviaQuest.classList.remove("hidden");
 }
 
- startButton.addEventListener("click", startQuiz);
+startButton.addEventListener("click", startQuiz);
+
+fetch("https://the-trivia-api.com/v2/questions");
 
 // let questions = document.getElementById("trivia-question.numb");
 // (questions = [
