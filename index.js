@@ -2,9 +2,9 @@ let firstPage = document.getElementById("first-page");
 let triviaQuest = document.getElementById("quiz");
 let getScore = document.getElementById("score");
 let startButton = document.getElementById("start");
-const categories = 
+const triviaArray = ["easy", "medium", "hard"];
 const animeCategory = 31;
-
+var currentScore = 0;
 
 function startQuiz(e) {
   e.preventDefault();
@@ -20,13 +20,24 @@ function quizTopic() {
   triviaBox.innerHTML =
     "Let's test your knowledge on Japanese Anime and Manga!";
   triviaQuest.append(triviaBox);
-
-  async function getQuiz(){
-  categories.forEach(categories) 
-    fetch(`https://opentdb.com/api.php?amount=10&category=31&difficulty=${categories}&type=multiple`)
-    .await((response) => response.json());
-  }
 }
 quizTopic();
 
+async function getQuiz() {
+  const response = await fetch(
+    "https://opentdb.com/api.php?amount=10&category=31&difficulty=easy&type=multiple"
+  );
+  var data = await response.json();
+  console.log(data);
+}
+getQuiz();
 
+function trivialist() {
+  var quizQuestions = data.results;
+  for (let i = 0; i < quizQuestions.length; i++)
+    var question = quizQuestions[i].question;
+  var correctAnswers = quizQuestions[i].correct_answers;
+  var incorrectAnswers = quizQuestions.incorrect_answers;
+  var totalScore = correctAnswers,
+    incorrect_answers;
+}
