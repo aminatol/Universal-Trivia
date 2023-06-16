@@ -22,22 +22,20 @@ function quizTopic() {
   triviaQuest.append(triviaBox);
 }
 quizTopic();
-
-async function getQuiz() {
+//make call to trivia API
+async function getQuizData() {
   const response = await fetch(
     "https://opentdb.com/api.php?amount=10&category=31&difficulty=easy&type=multiple"
   );
   var data = await response.json();
   console.log(data);
 }
-getQuiz();
+getQuizData();
 
-function trivialist() {
-  var quizQuestions = data.results;
-  for (let i = 0; i < quizQuestions.length; i++)
-    var question = quizQuestions[i].question;
-  var correctAnswers = quizQuestions[i].correct_answers;
-  var incorrectAnswers = quizQuestions.incorrect_answers;
-  var totalScore = correctAnswers,
-    incorrect_answers;
+async function displayTrivia() {
+  let questions = await loadTrivia();
+  return data.results.map((x) => );
 }
+displayTrivia();
+
+// $("div.demo-container" ).html("<p>${x.question}</p>")
