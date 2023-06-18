@@ -1,12 +1,12 @@
 let firstPage = document.getElementById("first-page");
-let triviaQuest = document.getElementById("quiz");
+let secondPage = document.getElementById("second-page");
 let getScore = document.getElementById("score");
 let startButton = document.getElementById("start");
 
 function startQuiz(e) {
   e.preventDefault();
   firstPage.classList.add("hidden");
-  triviaQuest.classList.remove("hidden");
+  secondPage.classList.remove("hidden");
 }
 
 startButton.addEventListener("click", startQuiz);
@@ -22,11 +22,10 @@ quizTopic();
 
 //make call to trivia API
 
-async function getQuizData() {
-  const response = await fetch(
-    "https://opentdb.com/api.php?amount=10&category=31&difficulty=easy&type=multiple"
-  );
-  let data = await response.json();
-  console.log(data);
+async function loadQuestion() {
+  const APIUrl = "https://opentdb.com/api.php?amount=1";
+  const result = await fetch(`${APIUrl}`);
+  const data = await result.json();
+  result.innerHTML = "";
+  showQuestion(data.results[0]);
 }
-getQuizData();

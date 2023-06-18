@@ -4,15 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" width="300px" href="styles.css" />
-
+   
+  <link rel="stylesheet" width="300px" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comme:wght@500&display=swap" rel="stylesheet">
     <title>Universale Trivia</title>
   </head>
-  <body>
-    <section id="first-page">
+  <body class="style">
+  
+    <div class="border">
+<div class="trivia-container">
+<div class="trivia-header">
+<h1 class="trivia-title"> Universal Trivia</h1>
+
+<section id="first-page">
       <div id="header">
         <h1>Welcome to Universal Trivia!</h1>
-        <p>Read the instructions below to get started!</p>
+        <p><b>Read the instructions below to get started!</b></p>
       </div>
       <div id="game-container">
         <div class="info-box">
@@ -36,10 +45,35 @@
           <button id="start">Start Quiz!</button>
         </div>
       </div>
+      </div>
+</div>
     </section>
-    <section id="quiz" class="hidden">
-      <h2>Score<span id="score"> 0</span></h2>
+<section id="second-page" class="hidden">
+<div class="score"></div>
+  <span id="total-score">0/</span>
+  <span id="total-questions">10</span>
+
+<div class="trivia-body">
+<h2 class="trivia-question" id="question"> Sample Text for testing</h2>
+<ul class="trivia-selection">
+  <li>1. text edit text edit text</li>
+ <li>1. text edit text edit text</li>
+ <li>1. text edit text edit text</li>
+ <li>1. text edit text edit text</li>
+</ul>
+<div id="result">
+  <!--result here-->
+
+</div>
+<div class="footer">
+   <button type="button" id="check-answer">Check Answer</button>
+    <button type="button" id="play-again">Play Again</button>
     </section>
+</div>
+</div>
+
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
