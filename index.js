@@ -2,7 +2,8 @@ let firstPage = document.getElementById("first-page");
 let secondPage = document.getElementById("second-page");
 let getScore = document.getElementById("score");
 let startButton = document.getElementById("start");
-
+const _result = document.getElementById("result");
+/* hide first page with click to start */
 function startQuiz(e) {
   e.preventDefault();
   firstPage.classList.add("hidden");
@@ -11,21 +12,11 @@ function startQuiz(e) {
 
 startButton.addEventListener("click", startQuiz);
 
-function quizTopic() {
-  const triviaBox = document.createElement("div");
-  triviaBox.classList.add("anime");
-  triviaBox.innerHTML =
-    "Let's test your knowledge on Japanese Anime and Manga!";
-  triviaQuest.append(triviaBox);
-}
-quizTopic();
-
 //make call to trivia API
-
 async function loadQuestion() {
   const APIUrl = "https://opentdb.com/api.php?amount=1";
   const result = await fetch(`${APIUrl}`);
   const data = await result.json();
-  result.innerHTML = "";
+  _result.innerHTML = "";
   showQuestion(data.results[0]);
 }
